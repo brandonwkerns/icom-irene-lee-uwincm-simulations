@@ -44,9 +44,7 @@ def plot_map_background(plot_area=[-180,180,-80,80], ax = None, crs=None):
     res = '110m'  # Resolution/scale options: '10m','50m','110m' (higher scale --> higher spatial resolution)
 
     ## These pre-defined features are all at 110m resolution.
-    # ax.add_feature(cfeature.OCEAN)
     ax.add_feature(cfeature.LAND)
-    # ax.add_feature(cfeature.LAKES)
     ax.add_feature(cfeature.COASTLINE, linewidth=0.5)
     ax.add_feature(cfeature.BORDERS, linewidth=0.5)
     states_provinces = cfeature.NaturalEarthFeature(
@@ -60,8 +58,6 @@ def plot_map_background(plot_area=[-180,180,-80,80], ax = None, crs=None):
     gl = ax.gridlines(crs=ccrs.PlateCarree(), draw_labels=True,
                     linewidth=0.5, color='k', alpha=0.7, linestyle='--')
     gl.top_labels = False
-    # gl.left_labels = False
-    # gl.bottom_labels = False
     gl.right_labels = False
     gl.xlocator = mticker.FixedLocator(np.arange(-180, 180, 2))
     gl.ylocator = mticker.FixedLocator(np.arange(-90, 90, 2))
@@ -339,11 +335,6 @@ plot_best_track(AX[5], model_track_irene, color='w'
         , hour_markers_large=[], hour_markers_small=[]) # Model
 
 
-# divider = make_axes_locatable(AX[3])
-# cax     = divider.append_axes("right", size="5%", pad=0.10) 
-# hcb = plt.colorbar(cax=cax, label='Max Sig. Wave Hgt. [m]')
-
-
 for ax in AX:
     pe = [path_effects.Stroke(linewidth=2.5, foreground='white'),
                        path_effects.Normal()]
@@ -351,7 +342,6 @@ for ax in AX:
     ax.plot(-76.415, 38.556, '^', color='k', markersize=8, markerfacecolor='none', path_effects=pe, transform=ccrs.PlateCarree())
 
 for ax in AX[4:6]:
-    # ax.plot(-73.64, 38.708, 'x', color='k', markersize=8, markerfacecolor='none', path_effects=pe, transform=ccrs.PlateCarree())
     ax.plot(-74.122, 38.08, 'x', color='k', markersize=8, markerfacecolor='none', path_effects=pe, transform=ccrs.PlateCarree())
 
 
@@ -361,10 +351,10 @@ print('irene_and_lee__max_swaths2.revised.png')
 resize_colorbar(None)
 plt.savefig('irene_and_lee__max_swaths2.revised.png',dpi=300,bbox_inches='tight')
 
-print('irene_and_lee__max_swaths2.revised.pdf')
-plt.savefig('irene_and_lee__max_swaths2.revised.pdf',dpi=300,bbox_inches='tight')
+#print('irene_and_lee__max_swaths2.revised.pdf')
+#plt.savefig('irene_and_lee__max_swaths2.revised.pdf',dpi=300,bbox_inches='tight')
 
-print('irene_and_lee__max_swaths2.revised.eps')
-plt.savefig('irene_and_lee__max_swaths2.revised.eps',dpi=300,bbox_inches='tight')
+#print('irene_and_lee__max_swaths2.revised.eps')
+#plt.savefig('irene_and_lee__max_swaths2.revised.eps',dpi=300,bbox_inches='tight')
 
 plt.close(fig)
