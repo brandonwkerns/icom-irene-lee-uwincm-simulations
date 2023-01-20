@@ -186,10 +186,10 @@ map3 = plot_map_background(plot_area, ax = ax3, parallels_labels = [0,0,0,0])
 
 
 ## NOAA Tide Gauges
-stations1 = pd.read_json('/home/orca/bkerns/projects/coastal/irene_lee_rainfall_paper/usgs_stream_flow/data.bak/processed/stations_noaa.json')
+stations1 = pd.read_json('./stations_noaa.json')
 stations1.reset_index(inplace=True)
 
-stations_with_navd88 = pd.read_csv('../datum_reference/noaa_tide_gauges_ssh_offset.csv')
+stations_with_navd88 = pd.read_csv('./noaa_tide_gauges_ssh_offset.csv')
 
 
 H3 = ax3.scatter(stations1['lng'], stations1['lat'], marker='^', s=70, c= 'orange', linewidths=0.5, edgecolor='k')
@@ -204,7 +204,7 @@ map4 = plot_map_background(plot_area, ax = ax4, parallels_labels = [0,0,0,0])
 
 
 ## Estuary and tide gauge stations.
-stations2 = pd.read_json('/home/orca/bkerns/projects/coastal/irene_lee_rainfall_paper/usgs_stream_flow/data.bak/processed/stations_estuary.json')
+stations2 = pd.read_json('./stations_estuary.json')
 stations2.reset_index(inplace=True)
 H4 = ax4.scatter(stations2['dec_long_va'], stations2['dec_lat_va'], s=50, c= 'c', linewidth=1.5, edgecolor='k')
 N4 = len(stations2)
