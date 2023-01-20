@@ -1,0 +1,10 @@
+Original directory on orca: /home/orca/bkerns/projects/coastal/irene_lee_coastal_upriver_impacts_paper/figures/data_and_methods/domains_and_stations/helpers.py 
+
+
+
+Data it depends on:
+
+- IBTrACS: ibtracs.NA.list.v04r00.csv (obtain from https://www.ncei.noaa.gov/products/international-best-track-archive)
+- Post-processed model air-sea surface fields. (on orca home/orca/bkerns/projects/coastal/model_fields/).
+- Station location files. (stations_ndbc.json, stations_noaa.json, stations_estuary.json)
+- Stations used to determine UWINCM to NAVD88 offset: noaa_tide_gauges_ssh_offset.csv
