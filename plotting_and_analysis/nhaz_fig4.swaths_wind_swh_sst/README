@@ -1,0 +1,8 @@
+Original directory on orca: /home/orca/bkerns/projects/coastal/irene_lee_coastal_upriver_impacts_paper/figures/swaths/
+
+
+Data it depends on:
+
+- Post-processed air-sea surface fields (/home/orca/bkerns/projects/coastal/models/irene_and_lee_2011/impact_fields/relo_0826_v2_extend_irene/)
+- Model track files (Irene_simulation_final.txt)
+
