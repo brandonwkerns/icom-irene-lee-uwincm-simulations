@@ -1,4 +1,11 @@
-Script to combine the atmosphere, ocean, and waves surface/2d fields into post processed NetCDF files.
+Script to combine the atmosphere, ocean, and waves surface/2d fields into post processed NetCDF files that can be easily dealt with as Python xarrays.
+
+The atmosphere fields from the 3 domains are gridded onto a common 1.3 km refined grid.
+The ocean and wave fields use their original grid.
+
+Original directory on orca: /home/orca/bkerns/projects/coastal/models/irene_and_lee_2011/impact_fields/relo_0826_v2_extend_irene/
+
+
 
 
 
